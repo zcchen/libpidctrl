@@ -1,5 +1,5 @@
 # Program Name
-LIB_TARGET_NAME = pid-ctrl
+LIB_TARGET_NAME = pidctrl
 
 # Code Setting
 BUILD_DIR       = build
@@ -46,7 +46,7 @@ $(LIB_TARGET): $(LIB_OBJECTS)
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) $(STD_FLAGS) $(LDFLAGS) $< -c -o $@
 
-$(BUILD_DIR)/test-%: $(LIB_OBJECTS) $(TEST_DIR)/%.c
+$(BUILD_DIR)/test-%: $(TEST_DIR)/%.c
 	$(CC) $(CFLAGS) $(STD_FLAGS) $(LDFLAGS) -lm $^ -L. -l$(LIB_TARGET_NAME) -o $(@)
 
 clean:
