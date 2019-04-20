@@ -1,0 +1,8 @@
+# editors
+.*.sw*
+*~
+
+# binary or libraries
+build/
+*.a
+*.so
